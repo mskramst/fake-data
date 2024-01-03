@@ -1,6 +1,6 @@
 {
-  "name": ":fake-data",
-  "version": "1.0.0",
+  "name": "@mskramst/fake-data",
+  "version": "0.0.1",
   "description": "",
   "main": ".dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,12 +10,14 @@
     "lint": "tsc",
     "dev": "vitest",
     "test": "vitest run",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build"
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
   },
   "keywords": [],
   "author": "M Skramstad",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/node": "^20.10.6",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
