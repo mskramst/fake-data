@@ -24,8 +24,9 @@ export class DataGenerator {
       return generateLineup(team);
    }
 
-   writeData(filename:string, contentArr:string) {
-     fs.writeFile(filename, contentArr, (err) => {
+   writeData<T>(filename:string, contentArr:T[]) {
+      const resultString = JSON.stringify(contentArr);
+     fs.writeFile(filename, resultString, (err) => {
          if (err) throw err;
                console.log(`${filename} created!`);
          });

@@ -7,16 +7,12 @@ import { Lineup } from './models/Lineup';
 const generator = new DataGenerator();
 
 const players:Player[] = generator.getPlayers(5);
-console.log(players);
-
 const teams:Team[] = generator.getTeams(3);
-console.log(teams);
-
 const events:ScoringEvent[] = generator.getScoringEvents();
-console.log(events);
-
 const lineup:Lineup = generator.getLineup(new Team());
-console.log(lineup);
+generator.writeData("players.json", players);
+
+
 //const total = parseInt(args[3]);
 //const args = process.argv;
 //const dataType = args[2];
