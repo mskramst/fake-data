@@ -1,3 +1,4 @@
+import fs  from 'fs';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
 import { ScoringEvent } from '../models/ScoringEvent'
@@ -7,31 +8,27 @@ import { generatePlayerData, generateTeamData,
 
 export class DataGenerator {
 
-   private typeOfData: string = "player";
-   private  total: number = 1;
-
-   setType(type:string) {
-      this.typeOfData = type;
+   getPlayers(num:number): Player[] {
+     return generatePlayerData(num);
    }
 
-   setTotal(num:number) {
-      this.total = num;
+   getTeams(num:number):Team[] {
+     return generateTeamData(num);
    }
 
-   playerData(): Player[] {
-     return generatePlayerData(this.total);
-   }
-
-   teamData():Team[] {
-     return generateTeamData(this.total);
-   }
-
-   gameEvents(): ScoringEvent[] {
+   getScoringEvents(): ScoringEvent[] {
      return generateGameEvents();
    }
 
-   lineup(team:Team): Lineup {
+   getLineup(team:Team): Lineup {
       return generateLineup(team);
+   }
+
+   writeData(filename:string, contentArr:string) {
+     fs.writeFile(filename, contentArr, (err) => {
+         if (err) throw err;
+               console.log(`${filename} created!`);
+         });
    }
 
 }

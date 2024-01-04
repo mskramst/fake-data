@@ -1,4 +1,3 @@
-//import fs  from 'fs';
 import { Player } from '../models/Player'
 import { Team } from '../models//Team';
 import { ScoringEvent } from '../models/ScoringEvent';
@@ -14,10 +13,6 @@ export const generatePlayerData = (total: number):Player[] => {
             players.push(player)
          }
 
-//         const contentArr = JSON.stringify(players);
-
-//         writeData("player.json", contentArr);
-
          return players;
 }
 
@@ -29,10 +24,6 @@ export const generateTeamData = (total: number):Team[] => {
          const team = new Team();
             teams.push(team)
          }
-
- //        const contentArr = JSON.stringify(teams);
-
- //        writeData("teams.json", contentArr);
          
          return teams;
 }
@@ -54,10 +45,6 @@ export const generateGameEvents = ():ScoringEvent[] => {
       events.push(event);
    }
 
-  // const contentArr = JSON.stringify(events);
-
-  // writeData("events.json", contentArr);
-
    return events;
 }
 
@@ -65,21 +52,7 @@ export const generateLineup = (team:Team): Lineup => {
    
    const lineup = new Lineup(team);
 
-   //const contentArr = JSON.stringify(lineup);
-
-   //writeData("lineup.json", contentArr);
-
    return lineup;
 
 }
 
-/*
-const writeData = (filename:string, contentArr:string) => {
-   
-         fs.writeFile(filename, contentArr, (err) => {
-            if (err) throw err;
-               console.log(`${filename} created!`);
-         });
-}
-
-*/
