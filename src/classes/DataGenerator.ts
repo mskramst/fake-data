@@ -38,5 +38,4 @@ export class DataGenerator {
 
 }
 
-
-
+module.exports= DataGenerator;
