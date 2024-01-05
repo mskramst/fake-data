@@ -8,6 +8,10 @@ import { generatePlayerData, generateTeamData,
 
 export class DataGenerator {
 
+   constructor() {
+      console.log("created");
+   }
+
    getPlayers(num:number): Player[] {
      return generatePlayerData(num);
    }
