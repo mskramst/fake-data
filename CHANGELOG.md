@@ -1,5 +1,11 @@
 # @mskramst/fake-data
 
+## 0.0.5
+
+### Patch Changes
+
+- 79edc25: Removed extra files and removed main index.ts file"
+
 ## 0.0.4
 
 ### Patch Changes
