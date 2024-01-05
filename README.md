@@ -1,11 +1,12 @@
 # Fake sports generator
 
-Currently this tool generates the following fake data:
+## Currently this tool generates the following fake data:
 1. a specified number of fake players
-2. a specified number of teams
-3. a number of scoring events for a baseball game
-4. a lineup of random players for one team.
+2. a specified number of fake teams
+3. a number of simulated scoring events for a fake baseball game
+4. a fake lineup of random players for one team.
 
+## Instructions 
 1. import the DataGenerator class.
 
 2. create an instance of DataGenerator and call one of the four functions:
@@ -19,6 +20,6 @@ getPlayers(num), getTeams(num), getScoringEvents(), getLineup(new Team())
 ```ts
 
 const generator = new DataGenerator();
-console.l(generator.getPlayers(3))
+console.log(generator.getPlayers(3))
 generator.writeData("players.json", generator.getPlayers(3))
 ```
