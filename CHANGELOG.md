@@ -1,5 +1,11 @@
 # @mskramst/fake-data
 
+## 0.0.4
+
+### Patch Changes
+
+- b588325: Got library working with all 4 classes and writeData / readme
+
 ## 0.0.3
 
 ### Patch Changes
