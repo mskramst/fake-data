@@ -1,5 +1,11 @@
 # @mskramst/fake-data
 
+## 0.0.6
+
+### Patch Changes
+
+- 3196f90: Added export for class
+
 ## 0.0.5
 
 ### Patch Changes
