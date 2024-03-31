@@ -1,5 +1,11 @@
 # @mskramst/fake-data
 
+## 0.0.7
+
+### Patch Changes
+
+- 7abd543: Created updates
+
 ## 0.0.6
 
 ### Patch Changes
